@@ -1,148 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>README for Test.ipynb</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f9fafb;
-            color: #374151;
-        }
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background-color: #ffffff;
-            border-radius: 0.75rem; /* rounded-xl */
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
-        }
-        h1 {
-            font-size: 2.25rem; /* text-4xl */
-            font-weight: 700; /* font-bold */
-            margin-bottom: 1.5rem; /* mb-6 */
-            color: #1f2937;
-        }
-        h2 {
-            font-size: 1.75rem; /* text-3xl */
-            font-weight: 600; /* font-semibold */
-            margin-top: 2rem; /* mt-8 */
-            margin-bottom: 1rem; /* mb-4 */
-            color: #1f2937;
-        }
-        h3 {
-            font-size: 1.25rem; /* text-xl */
-            font-weight: 600; /* font-semibold */
-            margin-top: 1.5rem; /* mt-6 */
-            margin-bottom: 0.75rem; /* mb-3 */
-            color: #1f2937;
-        }
-        ul {
-            list-style-type: disc;
-            margin-left: 1.5rem; /* ml-6 */
-            margin-bottom: 1rem; /* mb-4 */
-        }
-        ol {
-            list-style-type: decimal;
-            margin-left: 1.5rem; /* ml-6 */
-            margin-bottom: 1rem; /* mb-4 */
-        }
-        li {
-            margin-bottom: 0.5rem; /* mb-2 */
-        }
-        code {
-            background-color: #e5e7eb; /* gray-200 */
-            padding: 0.25rem 0.5rem; /* px-2 py-1 */
-            border-radius: 0.375rem; /* rounded-md */
-            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-            font-size: 0.875rem; /* text-sm */
-        }
-        pre {
-            background-color: #1f2937; /* gray-800 */
-            color: #f9fafb; /* gray-50 */
-            padding: 1rem; /* p-4 */
-            border-radius: 0.5rem; /* rounded-lg */
-            overflow-x: auto;
-            margin-top: 1rem; /* mt-4 */
-            margin-bottom: 1rem; /* mb-4 */
-        }
-    </style>
-</head>
-<body class="p-4">
-    <div class="container">
-        <h1><code>Test.ipynb</code> - Machine Learning Model Training Notebook</h1>
+Test.ipynb - Machine Learning Model Training Notebook
+This Jupyter Notebook (Test.ipynb) contains Python code for training and evaluating a Machine Learning model, specifically a RandomForestClassifier. It demonstrates a typical workflow for a classification task, including data loading, preprocessing, model training, saving, and evaluation.
+Project Description
+The primary purpose of this notebook is to:
 
-        <p>This Jupyter Notebook (<code>Test.ipynb</code>) contains Python code for training and evaluating a Machine Learning model, specifically a RandomForestClassifier. It demonstrates a typical workflow for a classification task, including data loading, preprocessing, model training, saving, and evaluation.</p>
+Load a dataset from a CSV file (data/mydata.csv).
+Define features and a target variable for a classification problem.
+Preprocess the features using StandardScaler.
+Split the data into training and testing sets.
+Train a RandomForestClassifier model.
+Save the trained model and the scaler for future use.
+Evaluate the model's performance based on accuracy.
 
-        <h2>Project Description</h2>
-        <p>The primary purpose of this notebook is to:</p>
-        <ol>
-            <li>Load a dataset from a CSV file (<code>data/mydata.csv</code>).</li>
-            <li>Define features and a target variable for a classification problem.</li>
-            <li>Preprocess the features using <code>StandardScaler</code>.</li>
-            <li>Split the data into training and testing sets.</li>
-            <li>Train a <code>RandomForestClassifier</code> model.</li>
-            <li>Save the trained model and the scaler for future use.</li>
-            <li>Evaluate the model's performance based on accuracy.</li>
-        </ol>
+Features and Target
+The model uses the following features from the dataset:
 
-        <h2>Features and Target</h2>
-        <p>The model uses the following features from the dataset:</p>
-        <ul>
-            <li><code>profile pic</code></li>
-            <li><code>nums/length username</code></li>
-            <li><code>fullname words</code></li>
-            <li><code>nums/length fullname</code></li>
-            <li><code>name==username</code></li>
-            <li><code>description length</code></li>
-            <li><code>external URL</code></li>
-            <li><code>private</code></li>
-            <li><code>#posts</code></li>
-            <li><code>#followers</code></li>
-            <li><code>#follows</code></li>
-        </ul>
-        <p>The target variable for prediction is:</p>
-        <ul>
-            <li><code>fake</code></li>
-        </ul>
+profile pic
+nums/length username
+fullname words
+nums/length fullname
+name==username
+description length
+external URL
+private
+#posts
+#followers
+#follows
 
-        <h2>Model Used</h2>
-        <ul>
-            <li><strong>Algorithm:</strong> RandomForestClassifier</li>
-            <li><strong>Parameters:</strong> <code>n_estimators=100</code>, <code>random_state=42</code></li>
-        </ul>
+The target variable for prediction is:
 
-        <h2>Dependencies</h2>
-        <p>The following Python libraries are required to run this notebook:</p>
-        <ul>
-            <li><code>pandas</code></li>
-            <li><code>joblib</code></li>
-            <li><code>sklearn</code> (scikit-learn)</li>
-            <li><code>os</code></li>
-        </ul>
-        <p>You can install these dependencies using pip:</p>
-        <pre><code>pip install pandas joblib scikit-learn</code></pre>
+fake
 
-        <h2>How to Run</h2>
-        <ol>
-            <li><strong>Data Preparation:</strong> Ensure you have a CSV file named <code>mydata.csv</code> in a directory named <code>data/</code> relative to where this notebook is located. The CSV file must contain the columns specified in the "Features and Target" section.</li>
-            <li><strong>Directory Setup:</strong> The notebook will automatically create a <code>models/</code> directory if it doesn't already exist.</li>
-            <li><strong>Execute:</strong> Open the <code>Test.ipynb</code> file in a Jupyter environment (e.g., JupyterLab, Jupyter Notebook, VS Code with Jupyter extension) and run all cells sequentially.</li>
-        </ol>
+Model Used
 
-        <h2>Output</h2>
-        <p>Upon successful execution, the notebook will:</p>
-        <ul>
-            <li>Train the RandomForestClassifier model.</li>
-            <li>Save the trained model to <code>models/random_forest_model.pkl</code>.</li>
-            <li>Save the <code>StandardScaler</code> object to <code>models/scaler.pkl</code>.</li>
-            <li>Print the accuracy of the trained model on the test set to the console.</li>
-        </ul>
-        <p>Example Output:</p>
-        <pre><code>✅ Model trained and saved! Accuracy: 0.91</code></pre>
-    </div>
-</body>
-</html>
+Algorithm: RandomForestClassifier
+Parameters: n_estimators=100, random_state=42
+
+Dependencies
+The following Python libraries are required to run this notebook:
+
+pandas
+joblib
+sklearn (scikit-learn)
+os
+
+You can install these dependencies using pip:
+pip install pandas joblib scikit-learn
+
+How to Run
+
+Data Preparation: Ensure you have a CSV file named mydata.csv in a directory named data/ relative to where this notebook is located. The CSV file must contain the columns specified in the "Features and Target" section.
+Directory Setup: The notebook will automatically create a models/ directory if it doesn't already exist.
+Execute: Open the Test.ipynb file in a Jupyter environment (e.g., JupyterLab, Jupyter Notebook, VS Code with Jupyter extension) and run all cells sequentially.
+
+Output
+Upon successful execution, the notebook will:
+
+Train the RandomForestClassifier model.
+Save the trained model to models/random_forest_model.pkl.
+Save the StandardScaler object to models/scaler.pkl.
+Print the accuracy of the trained model on the test set to the console.
+
+Example Output:
+✅ Model trained and saved! Accuracy: 0.91
+
